@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+		<title>搜索结果页面</title>
+		<link rel="stylesheet" type="text/css" href="../../css/api.css" />
+		<style>
+			ul li {
+				padding: 20px;
+				border-bottom: 1px solid #ddd;
+			}
+			.msg{
+				width: 100%;
+				color: #787878;
+				font-size: 12px;
+				text-align: center;
+				margin-top:10px;
+			}
+		</style>
+	</head>
+	<body>
+		<ul id="reslist"></ul>
+	</body>
+	<script type="text/javascript" src="../../script/api.js"></script>
+	<script type="text/javascript" src="../../script/app/config.js"></script>
+	<script type="text/javascript" src="../../script/app/api/baidumusic.js"></script>
+	<script type="text/javascript">
+		var bm;
+		function result(sign) {
+			sign = (sign == undefined)?'sign':'none';
+			var ihtml = "<p class='msg'>暂未找到匹配的结果</p>";
+			if(sign != 'none'){
+				var songlist = $api.getStorage('searchResult');
+				if (songlist != undefined) {
+//					console.log(JSON.stringify(songlist));
+					if (songlist.length >= 0) {
+						ihtml = "";
+					}
+					for (var i = 0; i < songlist.length; i++) {
+//						console.log(JSON.stringify(songlist[i]));
+						ihtml += "<li onclick='detailRadio(\""+songlist[i].songid+"\")'>" + songlist[i].songname + " - " + songlist[i].artistname + "</li>"
+					}
+				}
+			}
+			$api.byId("reslist").innerHTML = ihtml;
+		}
+		
+		/**
+		 * 播放音乐 
+		 */
+		function detailRadio(songid){
+            $api.setStorage("whereModRadioDetail",tabWinSearch);
+            notification()
+			loading("加载中");
+			console.log(debug(arguments));
+            api.openFrame({
+                name: modMusicDetail,
+                url: "../../" + modMusicDetailURL,
+                bounces: false,
+                animation: {
+                    type: "movein", //动画类型（详见动画类型常量）
+                    subType: "from_right", //动画子类型（详见动画子类型常量）
+                    duration: 300 //动画过渡时间，默认300毫秒
+                },
+                pageParam: {
+                    songid: songid
+                }
+            });
+            finishing();
+		}
+		
+		function history(){
+			var searchHistoryList = $api.getStorage('searchHistoryList');
+			var ihtml = "<p class='msg'>暂未发现历史纪录</p>";
+			if (searchHistoryList != undefined) {
+				if (searchHistoryList.length >= 0) {
+					ihtml = "";
+				}
+				for (var i = 0; i < searchHistoryList.length; i++) {
+//					console.log("搜索历史："+searchHistoryList[i]);
+					ihtml += "<li id='seahistory-"+i+"' onclick='doSearch(\""+searchHistoryList[i]+"\")'>" + searchHistoryList[i] + "</li>"
+				}
+			}
+			$api.byId("reslist").innerHTML = ihtml;
+		}
+		
+		function doSearch(text){
+            notification()
+			scriptWindow(tabWinSearch,'search("'+text+'")');
+		}
+
+		apiready = function() {
+			history();
+			bm = new baiduMusic();
+		};
+	</script>
+</html>

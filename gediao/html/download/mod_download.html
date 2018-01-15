@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/api.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/aui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/app/download/mod_download.css" />
+	</head>
+	<body>
+		<div id="main">
+			<div id="no-file">
+				<h1></h1>
+				<div class="d-control aui-btn aui-btn-info aui-btn-block aui-btn-outlined" onclick="opendView();">
+					打开下载管理 <span class="aui-badge aui-badge-warning" id="d-num" style="line-height: 1;padding:4px 6px;">0</span>
+				</div>
+				<p>
+					要离线收听，不耗流量？快把想听的内容下载下来吧！
+				</p>
+			</div>
+		</div>
+		<p class="storage">
+			存储位置：存储卡1，剩余空间24.8G
+		</p>
+	</body>
+	<script type="text/javascript" src="../../script/api.js"></script>
+	<script type="text/javascript" src="../../script/app/config.js"></script>
+	<script type="text/javascript">
+		var downloadManager;
+		function opendView() {
+//            api.openFrame({
+//                name : "MUSIC_DOWNLOAD_ED",
+//                url : "../../html/download/mod_downloaded.html",
+//                bounces : false,
+//                rect : {
+//                    x : 0,
+//                    y : 35,
+//                    w : 'auto',
+//                    h : 'auto'
+//                },
+//                progress:{
+//                    title:"加载中",               //type为default时显示的加载框标题
+//                    text:"",                //type为default时显示的加载框内容
+//                }
+//            });
+            notification()
+            var downloadManager = api.require('downloadManager');
+            downloadManager.openManagerView({
+                title : '下载管理'
+            }, function(ret, err) {
+                console.log("下载管理："+JSON.stringify(ret));
+//				if (ret) {
+//					if(ret.event){
+//						alert("操作成功");
+//					}
+//				} else {
+////					console.log("错误信息：" + JSON.stringify(err));
+//				}
+            });
+		}
+
+		function getData() {
+			//获取已经下载成功的文件信息
+			//返回数据：{
+			//  data:
+			//  [{
+			//      id: '123456',                          //下载id
+			//      status: 1,                             //下载状态
+			//      url: '',                               //资源地址
+			//      savePath: '',                         //下载文件本地存储路径
+			//      title: '教程',                      //下载文件标题
+			//      totalSize: 1000,                       //文件总大小，单位 byte
+			//      finishSize: 500,                       //已完成下载大小，单位 byte
+			//      mimeType: 'audio/mp4',                 //文件类型
+			//      iconPath: ''                           //图片路径
+			//      reason: ''                             //当下载发生错误时，错误的描述。详见下载错误常量表
+			//  }]
+			//}
+			loading("加载中");
+			downloadManager = api.require('downloadManager');
+			downloadManager.query({
+				//这里不放任何参数,拿到所有的,然后逻辑排除已经下载成功的(status=3)
+			}, function(ret, err) {
+				console.log(JSON.stringify(ret));
+				if (ret && JSON.stringify(ret) != "{}") {
+					$api.text($api.byId("d-num"), ret.data.length);
+					finishing();
+				} else {
+					$api.text($api.byId("d-num"), 0);
+					finishing();
+				}
+			});
+		}
+
+		apiready = function() {
+            var index = $api.getStorage("swipeIndex");
+			if(index != 2){
+                getData();
+			}
+			swipeTab(2, 'left');
+		};
+	</script>
+</html>

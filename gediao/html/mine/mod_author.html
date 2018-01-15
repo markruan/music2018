@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/app/music/mod_page.css"/>
+</head>
+<body>
+<div id="content">
+    <div id="wrap">
+        <div id="header">
+            <a class="back-icon" tapmode="" onclick="notification();api.closeWin();"></a>
+            <h1>作者网站</h1>
+        </div>
+        <div id="main">
+
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="../../script/api.js"></script>
+<script type="text/javascript" src="../../script/zepto.js"></script>
+<script type="text/javascript" src="../../script/app/config.js"></script>
+<script>
+    apiready = function() {
+        api.openFrame({
+            name : "MOD_AUTHOR",
+            url : "http://blog.jiukesongd3.com/",
+            bounces : false,
+            rect : {
+                x : 0,
+                y : 54,
+                w : 'auto',
+                h : 'auto'
+            },
+            progress:{
+                title:"加载中",               //type为default时显示的加载框标题
+                text:"",                //type为default时显示的加载框内容
+            }
+        });
+    }
+</script>
+</html>

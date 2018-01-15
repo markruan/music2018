@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <title>蜻蜓FM</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+   	<link rel="stylesheet" type="text/css" href="../../css/app/guide/mod_guide.css" />
+</head>
+<body>
+<div id="page1">
+    <h1>请选择您的性别</h1>
+    <h2>为您推荐更合适的内容</h2>
+    <div class="gender">
+        <p tapmode onclick="singleSel(this, 'gender')">
+            <i></i>
+            <img src="../../image/ug_gender_boy.png" />
+            <span>男</span>
+        </p>
+        <p tapmode onclick="singleSel(this, 'gender')">
+            <i></i>
+            <img src="../../image/ug_gender_girl.png" />
+            <span>女</span>
+        </p>
+    </div>
+    <div class="btn">
+        <label>1/2</label>
+        <button disabled="disabled" class="next disabled" onclick="goNext(1);">下一步</button>
+    </div>
+</div>
+<div id="page2">
+    <h1>请您选择</h1>
+    <h2>为您推荐更合适的内容</h2>
+    <div class="job">
+        <p tapmode onclick="singleSel(this, 'job')">
+            <i></i>
+            <img src="../../image/ug_people_worker.png" />
+            <span>上班族</span>
+        </p>
+        <p tapmode onclick="singleSel(this, 'job')">
+            <i></i>
+            <img src="../../image/ug_people_student.png" />
+            <span>学生</span>
+        </p>
+        <p tapmode onclick="singleSel(this, 'job')">
+            <i></i>
+            <img src="../../image/ug_people_older.png" />
+            <span>中老年</span>
+        </p>
+        <p tapmode onclick="singleSel(this, 'job')">
+            <i></i>
+            <img src="../../image/ug_people_else.png" />
+            <span>其他</span>
+        </p>
+    </div>
+    <div class="btn">
+        <span class="prev" tapmode onclick="goPrev(1);">&lt; 上一步</span>
+        <label>2/2</label>
+        <button disabled="disabled" class="next disabled" onclick="goNext(2);">开启您的收听之旅</button>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../../script/api-lite.js"></script>
+<script type="text/javascript" src="../../script/zepto.js"></script>
+<script type="text/javascript" src="../../script/app/config.js"></script>
+<script type="text/javascript">
+    function singleSel(it, container){
+        notification()
+    	console.log(debug(arguments));
+        $('.'+container).find('.selected').removeClass('selected');
+        $(it).addClass('selected');
+        $('.'+container).next('.btn').find('.next').removeClass('disabled');
+        $('.'+container).next('.btn').find('.next').removeAttr('disabled');
+    }
+    function multiSel(it){
+    	console.log(debug(arguments));
+        var $this = $(it);
+        if($this.hasClass('selected')){
+            $this.removeClass('selected');
+        }else{
+            $this.addClass('selected');
+        }
+    }
+    function goPrev(num){
+        notification()
+    	console.log(debug(arguments));
+        num = parseInt(num);
+        $('#page'+ num).removeClass('out');
+    }
+    function goNext(num){
+        notification()
+    	console.log(debug(arguments));
+        num = parseInt(num);
+        if(num === 2){  //最后一步
+            scriptWindow('root',"loadPage()");
+        }else{
+            $('#page'+ num).addClass('out');
+        }
+    }
+    apiready = function(){
+    	console.log(debug(arguments));
+        
+    };
+</script>
+</html>

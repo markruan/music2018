@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/api.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/aui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/animate.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/app/mine/mod_login.css"/>
+	</head>
+	<body>
+		<div class="aui-toast" style="position:absolute;display:none;" id="success-tip">
+			<i class="aui-iconfont aui-icon-check"></i>
+			<div class="aui-toast-content">
+				反馈成功
+			</div>
+		</div>
+		<div id="wrap">
+			<div id="header">
+				<div class="aui-tips animated" id="tips-1" style="position:absolute;display:none;" onclick="notification();closeTips()">
+					<div class="aui-tips-content aui-ellipsis-1" >
+						<i class="aui-iconfont aui-icon-warnfill"></i>
+						<span id="tip-text"></span>
+						<i class="aui-iconfont aui-icon-roundclosefill" tapmode></i>
+					</div>
+				</div>
+				<a class="back-icon" tapmode="" onclick="api.closeFrame()"></a>
+				<h1>意见反馈</h1>
+			</div>
+			<div id="main">
+				<div id="feedb-tip" class="aui-tips aui-tips-success">
+					<div class="aui-tips-content aui-ellipsis-1" >
+						<i class="aui-iconfont aui-icon-warnfill"></i>
+						请在下面写下你的反馈信息... <i class="aui-iconfont aui-icon-roundclosefill" onclick="hideTip()"></i>
+					</div>
+				</div>
+				<div class="aui-form">
+					<br/>
+					<div class="aui-input-row" style="width:100%;">
+						<textarea id="fb-content" class="aui-input" style="width:100%;height:100px;" onfocus="clearText(this)">来，不服打一架...</textarea>
+					</div>
+					<div class="aui-btn-row">
+						<div class="aui-btn aui-btn-success" onclick="doFeedback()">
+							确认
+						</div>
+						<div class="aui-btn aui-btn-warning" onclick="notification();api.closeFrame()">
+							取消
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<p class="copyright">
+			©2016-
+			<script>
+				document.write(new Date().getFullYear())
+			</script>
+			格调云音乐 All Right is Reserved.
+		</p>
+	</body>
+	<script type="text/javascript" src="../../script/api.js"></script>
+	<script type="text/javascript" src="../../script/app/config.js"></script>
+	<script type="text/javascript" src="../../script/sha.js"></script>
+	<script type="text/javascript" src="../../script/app/mcm.js"></script>
+	<script type="text/javascript" src="../../script/app/mine/mod_feedback.js"></script>
+</html>

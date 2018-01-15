@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/api.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/app/music/mod_radio_detail.css" />
+	</head>
+	<body>
+		<div id="wrap">
+			<header>
+				<i id="zxx-back" class="back" tapmode="" onclick="notification();zxxAudio.goBack()"></i>
+				<div id="zxx-title">正在加载...</div>
+				<i class="more" onclick="doMore()"></i>
+			</header>
+			<div id="main">
+				<div class="wrap" style="text-align:center;">
+					<img id="zxx-song-pic" class="" width="50%" src="../../image/img/cd.png"/>
+					<div class="zxx-lrc" style="text-align:center;margin-top: 30px;color:#eee;font-size:12px;">
+						<p id="zxx-song-lrc">
+							正在载入歌词...
+						</p>
+					</div>
+				</div>
+			</div>
+			<ul id="action">
+				<li id="zxx-collect" class="collect" tapmode="focus" onclick="zxxAudio.collect(this)">
+					收藏
+				</li>
+				<li class="timer" tapmode="focus" onclick="zxxAudio.timing()">
+					定时
+				</li>
+				<li class="share" tapmode="focus" onclick="zxxAudio.share()">
+					分享
+				</li>
+				<li class="checkin" tapmode="focus" onclick="zxxAudio.detail()">
+					详情
+				</li>
+			</ul>
+			<div id="control">
+				<div id="slider">
+					<span id="slider-cur" class="s">00:00</span>
+					<span id="slider-dur" class="e"> ∞ </span>
+				</div>
+				<ul id="panel">
+					<li class="list" tapmode="focus" onclick="zxxAudio.showList()"></li>
+					<li class="prev" tapmode="focus" onclick="notification();zxxAudio.prev()"></li>
+					<li id="radio-play" class="play" tapmode="focus" onclick="notification();zxxAudio.play(this)"></li>
+					<li class="next" tapmode="focus" onclick="notification();zxxAudio.next()"></li>
+					<li class="download" tapmode="focus" onclick="zxxAudio.download()"></li>
+				</ul>
+				<!--<div id="chat">
+				<a>进入官方群聊天 &gt;</a>
+				</div> -->
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../script/api.js"></script>
+	<script type="text/javascript" src="../../script/zepto.js"></script>
+	<script type="text/javascript" src="../../script/app/config.js"></script>
+	<script type="text/javascript" src="../../script/sha.js"></script>
+	<script type="text/javascript" src="../../script/app/mcm.js"></script>
+	<script type="text/javascript" src="../../script/app/api/baidumusic.js"></script>
+	<script type="text/javascript" src="../../script/app/fun/lyric.js"></script>
+	<script type="text/javascript" src="../../script/app/music/mod_radio_detail.js"></script>
+</html>

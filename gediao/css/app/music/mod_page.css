@@ -1,0 +1,201 @@
+#header {
+    background-color: #e13430;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    height:50px;
+    position: relative;
+}
+#header .back-icon {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: url(../../../image/navi_back.png) no-repeat center center;
+    -webkit-background-size: contain;
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+#header .prev-icon {
+    display: inline-block;
+    width: 56px;
+    height: 56px;
+    /* background: url(../../../image/navi_back.png) no-repeat center center;
+    -webkit-background-size: contain;
+    background-size: contain; */
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+#header h1 {
+    font-size: 15px;
+    height: 50px;
+    line-height: 50px;
+    margin: 0em;
+    color: #fff;
+}
+
+#top {
+    height: 266px;
+    position: relative;
+}
+#top .title {
+    position: absolute;
+    z-index: 10;
+    font-size: 14px;
+    width: 100%;
+    height: 103px;
+    line-height: 103px;
+    background: url(../../../image/vchannel_album_default.png) no-repeat 6% center;
+    -webkit-background-size: contain;
+    background-size: contain;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 134px;
+    top: 24%;
+    color: #eee;
+}
+#top .title img {
+    position: absolute;
+    left: 4%;
+    height: 100%;
+}
+#poster {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+#poster img {
+    width: 100%;
+    height: 100%;
+}
+#nav {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 3;
+    background-color: rgba(255,255,255,.1);
+}
+#nav ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+#nav ul li {
+    background: url(../../../image/voice_logo_vertical.png) no-repeat right center;
+    -webkit-background-size: 1px 30px;
+    background-size: 1px 30px;
+    text-align: center;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+}
+#nav ul li:last-child {
+    background-image: none;
+}
+#nav ul li span {
+    display: inline-block;
+    padding-top: 34px;
+    color: #fff;
+    padding-bottom: 10px;
+    font-size: 14px;
+    background-position: center top;
+    background-repeat: no-repeat;
+    -webkit-background-size: 34px;
+    background-size: 34px;
+}
+#nav ul li.focus {
+    background-color: rgba(0,0,0,.2);
+}
+#nav .collect span {
+    background-image: url(../../../image/ic_channel_addfav.png);
+}
+#nav ul .collect.focus span {
+    background-image: url(../../../image/ic_channel_fav_s.png);
+}
+#nav ul .collect.active span {
+    background-image: url(../../../image/ic_channel_fav_s.png);
+}
+#nav .share span {
+    background-image: url(../../../image/ic_channel_share.png);
+}
+#nav ul .share.focus span {
+    background-image: url(../../../image/ic_channel_share_s.png);
+}
+#nav ul .share.active span {
+    background-image: url(../../../image/ic_channel_share_s.png);
+}
+#nav .download span {
+    background-image: url(../../../image/ic_channel_download.png);
+}
+#nav ul .download.focus span {
+    background-image: url(../../../image/ic_channel_download_s.png);
+}
+#nav ul .download.active span {
+    background-image: url(../../../image/ic_channel_download_s.png);
+}
+#nav .add span {
+    background-image: url(../../../image/ic_channel_play_schedule.png);
+}
+#nav ul .add.focus span {
+    background-image: url(../../../image/ic_channel_play_schedule_s.png);
+}
+#nav ul .add.active span {
+    background-image: url(../../../image/ic_channel_play_schedule_s.png);
+}
+#nav .play span {
+    background-image: url(../../../image/ic_channel_play_play.png);
+}
+#nav ul .play.focus span {
+    background-image: url(../../../image/ic_channel_play_play_s.png);
+}
+#nav ul .play.active span {
+    background-image: url(../../../image/ic_channel_play_play_s.png);
+}
+
+#main-lyric .title {
+    background-color: #eaeaea;
+    font-size: 14px;
+    padding: 10px 20px;
+    color: #787878;
+    border-bottom: 1px solid #ddd;
+}
+#main-lyric ul {
+    background-color: #eee;
+}
+#main-lyric ul li {
+    background: url(../../../image/virtual_triangular.png) no-repeat 98% 78%;
+    -webkit-background-size: 11px;
+    background-size: 11px;
+}
+#main-lyric ul li.focus {
+    background-color: #bebebe;
+}
+
+#main-lyric ul div {
+    padding: 10px 20px 14px;
+    font-size: 16px;
+    color: #272930;
+}
+#main-lyric ul li.active div {
+    color: #e13430;
+    padding-left: 40px;
+    background: url(../../../image/scheduleliving.png) no-repeat 20px 44%;
+    -webkit-background-size: 10px 13px;
+    background-size: 10px 13px;
+}
+#main-lyric ul p {
+    margin-left: 20px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+    color: #7e7e7e;
+    overflow: hidden;
+}
+#main-lyric ul p em {
+    float: right;
+    margin-right: 10px;
+}

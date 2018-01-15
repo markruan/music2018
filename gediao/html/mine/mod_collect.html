@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title>我的收藏</title>
+		<link rel="stylesheet" type="text/css" href="../../css/api.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/aui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/animate.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/app/mine/mod_login.css"/>
+	</head>
+	<body>
+		<div class="aui-toast" style="position:absolute;display:none;" id="success-tip">
+			<i class="aui-iconfont aui-icon-check"></i>
+			<div class="aui-toast-content">
+				取消成功
+			</div>
+		</div>
+		<div id="wrap">
+			<div id="header">
+				<div class="aui-tips animated" id="tips-1" style="position:absolute;display:none;" onclick="closeTips()">
+					<div class="aui-tips-content aui-ellipsis-1" >
+						<i class="aui-iconfont aui-icon-warnfill"></i>
+						<span id="tip-text"></span>
+						<i class="aui-iconfont aui-icon-roundclosefill" tapmode></i>
+					</div>
+				</div>
+				<a class="back-icon" tapmode="" onclick="api.closeFrame()"></a>
+				<h1>我的收藏</h1>
+				<a class="prev-icon" tapmode="" onclick="clearCollect()" style="color:#fff;padding-top:10px;font-size:15pt;"><i class="aui-iconfont aui-icon-delete"></i></a>
+			</div>
+			<div id="main">
+				<div class="aui-content">
+					<ul  id="listenlist" class="aui-list-view">
+						<!--收听历史记录-->
+					</ul>
+				</div>
+				<p id="msgtip" class='msg' style="display:none;">
+					暂无收藏记录
+				</p>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../script/api.js"></script>
+	<script type="text/javascript" src="../../script/app/config.js"></script>
+	<script type="text/javascript" src="../../script/sha.js"></script>
+	<script type="text/javascript" src="../../script/app/mcm.js"></script>
+	<script type="text/javascript" src="../../script/app/mine/mod_collect.js"></script>
+</html>

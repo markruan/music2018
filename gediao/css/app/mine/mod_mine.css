@@ -1,0 +1,112 @@
+body {
+	background-color: #eee;
+	padding-bottom: 5px;
+}
+#user {
+	height: 24%;
+	background: url(../../../image/userinfo_bg.jpg) no-repeat center top;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+#avator {
+	width: 100%;
+	margin: 0 auto;
+	padding-top: 16px;
+	padding-bottom: 10px;
+	text-align:center;
+/* 	background: url(../../../image/userinfo_avatar.png) no-repeat center 16px; 
+	-webkit-background-size: contain;
+	background-size: contain;*/
+}
+
+#avator > .p{
+	font-size: 12px;
+	color: #fff;
+}
+
+ul {
+	border-top: 1px solid #dedede;
+	border-bottom: 1px solid #dedede;
+	margin-bottom: 5px;
+	background-color: #fff;
+}
+ul li {
+	padding-left: 16%;
+}
+ul li.active {
+	background-color: #eee;
+}
+ul.first {
+	border-top: 0;
+}
+ul.last {
+	margin-bottom: 0;
+}
+ul li h1 {
+	font-size: 16px;
+	color: #272930;
+	padding: 10px 0;
+}
+ul li label {
+	font-size: 14px;
+	color: #787878;
+	display: block;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #ddd;
+	max-width: 100%;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+ul li:last-child label {
+	border-bottom: 0;
+}
+.collect, .recent,.download, .order, .msg, .contact, .timer, .alarm, .setting {
+	background-position: 10px center;
+	background-repeat: no-repeat;
+	-webkit-background-size: 10%;
+	background-size: 10%;
+}
+.collect {
+	background-image: url(../../../image/userinfo_collection.png);
+}
+.recent {
+	background-image: url(../../../image/userinfo_history.png);
+}
+.download {
+	background-image: url(../../../image/userinfo_download.png);
+}
+.order {
+	background-image: url(../../../image/userinfo_reserve.png);
+}
+.msg {
+	background-image: url(../../../image/userinfo_conversations.png);
+}
+.contact {
+	background-image: url(../../../image/userinfo_contact.png);
+}
+.timer {
+	background-image: url(../../../image/userinfo_timer.png);
+}
+.alarm {
+	background-image: url(../../../image/userinfo_alarm.png);
+}
+.setting {
+	background-image: url(../../../image/userinfo_more.png);
+}
+.copyright {
+	position: absolute;
+	bottom: 5px;
+	width: 100%;
+	color: #787878;
+	font-size: 12px;
+	text-align: center;
+}
+.copyright2 {
+	marigin-top:20px;
+	margin-bottom: 5px;
+	width: 100%;
+	color: #787878;
+	font-size: 12px;
+	text-align: center;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/api.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/aui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/app/music/mod_disc_detail_c.css" />
+	</head>
+	<body>
+		<header>
+			<div id="poster">
+				<img src="../../image/vchannel_defaultbg2.jpg" />
+			</div>
+			<div class="title">
+				<img id="fsImg" src="../../image/pic/yinyue_p1.jpg" />
+				<p id="bangdan" style="line-height: 3.0;font-size:20px;color:#FFF;margin-left:30px;">
+					正在获取...
+				</p>
+			</div>
+			<div id="nav">
+				<ul>
+					<li class="download" tapmode="focus" onclick="downRadio()">
+						<span>下载</span>
+					</li>
+					<li class="play" tapmode="focus" onclick="playRadio()">
+						<span>播放</span>
+					</li>
+					<li class="add" tapmode="focus" onclick="addRadio()">
+						<span>添加</span>
+					</li>
+				</ul>
+			</div>
+		</header>
+		<div id="main">
+			<div class="title">
+				歌曲列表
+				<span id="sx-btn" style="float:right;color:red;margin-left:10px;" onclick="dealwith()">筛选</span>
+				<span id="sx-btn-all" class="sx-btn-ckall" style="margin-left:10px;float:right;color:red;display:none;" onclick="doAllCheck()">全选/反选</span>
+			</div>
+			<ul id="zxx-songlist"></ul>
+		</div>
+		<div id="load-div" style="width:100%;height:50px;margin-bottom:20px;padding-top:20px;text-align:center;">
+			<div id="load-ing"><img src='../../image/ic_ptr_pull.png' style="width:13px;">&nbsp;&nbsp;加载中...</div>
+			<button id="load-btn" style="display:none;width:80%;height:30px;margin:0 auto;background-color:#EEE;" onclick="loadMore()">点击加载更多</button>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../script/api.js"></script>
+	<script type="text/javascript" src="../../script/zepto.js"></script>
+	<script type="text/javascript" src="../../script/app/config.js"></script>
+	<script type="text/javascript" src="../../script/app/api/baidumusic.js"></script>
+	<script type="text/javascript" src="../../script/sha.js"></script>
+	<script type="text/javascript" src="../../script/app/mcm.js"></script>
+	<script type="text/javascript" src="../../script/app/music/mod_disc_detail_c.js"></script>
+</html>

@@ -1,0 +1,261 @@
+html, body {
+	height: 100%;
+}
+#wrap {
+	height: 100%;
+	background: url(../../../image/play_bg_tra.jpg) no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-flex-flow: column;
+	flex-flow: column;
+}
+#main {
+	position: relative;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	flex: 1;
+}
+header {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+header div {
+	font-size: 14px;
+	color: #fff;
+	text-align: center;
+	line-height: 49px;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	flex: 1;
+}
+header i {
+	display: block;
+	width: 53px;
+	height: 49px;
+}
+header .back {
+	background: url(../../../image/navi_back.png) no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+}
+header .more {
+	background: url(../../../image/navi_play_more.png) no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+}
+
+#action {
+	margin-bottom: 10px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+#action li {
+	text-align: center;
+	color: #cbcbcb;
+	font-size: 12px;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	flex: 1;
+	padding-top: 30px;
+	background-position: center top;
+	background-repeat: no-repeat;
+	-webkit-background-size: 25px;
+	background-size: 25px;
+}
+#action .collect {
+	background-image: url(../../../image/ic_play_fav.png);
+}
+#action .collect.focus {
+	background-image: url(../../../image/ic_play_fav_s.png);
+}
+#action .collect.active {
+	background-image: url(../../../image/ic_play_fav_s.png);
+}
+#action .timer {
+	background-image: url(../../../image/ic_play_timer.png);
+}
+#action .timer.focus {
+	background-image: url(../../../image/ic_play_timer_s.png);
+}
+#action .share {
+	background-image: url(../../../image/ic_play_share.png);
+}
+#action .share.focus {
+	background-image: url(../../../image/ic_play_share_s.png);
+}
+#action .checkin {
+	background-image: url(../../../image/ic_play_checkin.png);
+}
+#action .checkin.focus {
+	background-image: url(../../../image/ic_play_checkin_s.png);
+}
+#control {
+	background-color: #672d32;
+}
+#slider {
+	height: 50px;
+	position: relative;
+}
+#slider span {
+	position: absolute;
+	bottom: 0;
+	font-size: 12px;
+	color: #ccc;
+}
+#slider .s {
+	left: 10px;
+}
+#slider .e {
+	right: 10px;
+}
+#panel {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	padding: 30px 0 60px;
+}
+#panel li {
+	width: 30px;
+	height: 30px;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	flex: 1;
+	background-position: center;
+	background-repeat: no-repeat;
+	-webkit-background-size: 30px;
+	background-size: 30px;
+}
+#panel .list {
+	background-image: url(../../../image/ic_play_schedule.png);
+	-webkit-background-size: 25px;
+	background-size: 25px;
+}
+#panel .list.focus {
+	background-image: url(../../../image/ic_play_schedule_s.png);
+}
+#panel .prev {
+	background-image: url(../../../image/ic_play_pre.png);
+}
+#panel .prev.focus {
+	background-image: url(../../../image/ic_play_pre_s.png);
+}
+#panel .play {
+	background-image: url(../../../image/ic_play_play.png);
+}
+#panel .play.focus {
+	background-image: url(../../../image/ic_play_play_s.png);
+}
+#panel .pause {
+	background-image: url(../../../image/ic_play_pause.png);
+}
+#panel .pause.focus {
+	background-image: url(../../../image/ic_play_pause_s.png);
+}
+#panel .buffer {
+	background-image: none;
+}
+@-webkit-keyframes rotate{
+from {
+	-webkit-transform: rotate(0deg);
+}
+to {
+	-webkit-transform: rotate(360deg);
+}
+}
+@keyframes
+rotate {from{
+	transform: rotate(0deg);
+}
+to {
+	transform: rotate(360deg);
+}
+}
+#panel .buffer:before {
+	content: '';
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	background: url(../../../image/ic_play_buffer.png) no-repeat center;
+	-webkit-background-size: contain;
+	background-size: contain;
+	-webkit-animation: rotate 4s linear infinite;
+	animation: rotate 4s linear infinite;
+}
+#panel .buffer.focus {
+	background-image: url(../../../image/ic_play_buffer_s.png);
+}
+#panel .next {
+	background-image: url(../../../image/ic_play_next.png);
+}
+#panel .next.focus {
+	background-image: url(../../../image/ic_play_next_s.png);
+}
+#panel .download {
+	background-image: url(../../../image/ic_play_download.png);
+}
+#panel .download.focus {
+	background-image: url(../../../image/ic_play_download_s.png);
+}
+#chat {
+	overflow: hidden;
+	border-top: 1px solid #845253;
+}
+#chat a {
+	float: right;
+	padding: 10px;
+	font-size: 12px;
+	color: #ccc;
+}
+
+#main .wrap {
+	position: absolute;
+	margin: auto;
+	width: 100%;
+	bottom: 0;
+	top: 0;
+	height: 60%;
+}
+#main h1 {
+	font-size: 20px;
+	color: #fff;
+	text-align: center;
+}
+#main label {
+	display: block;
+	text-align: center;
+	font-size: 14px;
+	color: #ccc;
+	padding-top: 20px;
+}
+
+@-webkit-keyframes rotation{
+from {
+	-webkit-transform: rotate(0deg);
+}
+to {
+	-webkit-transform: rotate(-360deg);
+}
+}
+
+ /* 设置动画，animation:动画名称 动画播放时长单位秒或微秒 动画播放的速度曲线linear为匀速 动画播放次数infinite为循环播放; */
+.Rotation {
+	-webkit-transform: rotate(360deg);
+	animation: rotation 8s linear infinite;
+	-moz-animation: rotation 8s linear infinite;
+	-webkit-animation: rotation 8s linear infinite;
+	-o-animation: rotation 8s linear infinite;
+}
+
+.Rotation-pause{
+	animation-play-state: paused;
+}
+
+#zxx-song-pic {
+	border-radius: 250px;
+}
