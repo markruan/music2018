@@ -1,49 +1,49 @@
-<?xml version="1.0" encoding="UTF-8"?><widget id="A6947399513900" security="false" version="1.2.31">
-  <name>格调云音乐</name>  
-  <description>格调云音乐是一款基于APICloud平台开发的混合式移动应用，作者是ischitry，我的邮箱是ischitry@icloud.com，欢迎大家一起交流学习。</description>  
+<?xml version="1.0" encoding="UTF-8"?><widget id="A6904968890094" security="false" version="1.2.31">
+  <name>格调云音乐</name>
+  <description>格调云音乐是一款基于APICloud平台开发的混合式移动应用，作者是ischitry，我的邮箱是ischitry@icloud.com，欢迎大家一起交流学习。</description>
   <author email="ischitry@icloud.com" href="http://www.gediaomusic.com">ischitry</author>
-  <content src="index.html"/>  
-  <preference name="pageBounce" value="false"/>  
-  <preference name="appBackground" value="rgba(0,0,0,0.0)"/>  
-  <preference name="windowBackground" value="rgba(0,0,0,0.0)"/>  
-  <preference name="frameBackgroundColor" value="rgba(0,0,0,0.0)"/>  
-  <preference name="hScrollBarEnabled" value="true"/>  
-  <preference name="vScrollBarEnabled" value="true"/>  
-  <preference name="fullScreen" value="false"/>  
+  <content src="index.html"/>
+  <preference name="pageBounce" value="false"/>
+  <preference name="appBackground" value="rgba(0,0,0,0.0)"/>
+  <preference name="windowBackground" value="rgba(0,0,0,0.0)"/>
+  <preference name="frameBackgroundColor" value="rgba(0,0,0,0.0)"/>
+  <preference name="hScrollBarEnabled" value="true"/>
+  <preference name="vScrollBarEnabled" value="true"/>
+  <preference name="fullScreen" value="false"/>
   <preference name="autoUpdate" value="true"/>
-  <preference name="smartUpdate" value="true"/>  
-  <preference name="debug" value="false"/>  
-  <preference name="backgroundMode" value="audio"/>  
-  <preference name="iOS7StatusBarAppearance" value="false"/>  
-  <preference name="statusBarAppearance" value="false"/>  
-  <preference name="autoLaunch" value="true"/>  
-  <permission name="readPhoneState"/>  
-    
-    
-  <permission name="camera"/>  
-  <permission name="record"/>  
-  <permission name="location"/>  
-  <permission name="fileSystem"/>  
-  <permission name="internet"/>  
-  <permission name="bootCompleted"/>  
-  <permission name="hardware"/>  
-    
-  <access origin="*"/>  
-  <feature name="qq"> 
-    <param name="urlScheme" value="tencent1106115842"/>  
-    <param name="apiKey" value="1106115842"/> 
-  </feature>  
-  <feature name="wx"> 
-    <param name="urlScheme" value="wxd0d84bbf23b4a0e4"/>  
-    <param name="apiKey" value="wxd0d84bbf23b4a0e4"/>  
-    <param name="apiSecret" value="a354f72aa1b4c2b8eaad137ac81434cd"/> 
-  </feature>  
-  <feature name="smsVerify"> 
-    <param name="android_app_key" value="1e2a76a3eac1f"/>  
-    <param name="android_app_secret" value="4d33acb36b4c15ab57c6acb808b07cc5"/>  
-    <param name="ios_app_key" value="e2fhsc7fbw00"/>  
-    <param name="ios_app_secret" value="db5abtd9931e3211932dde17c94c30ae"/> 
-  </feature>  
-  <feature name="downloadManager"/>  
-  <feature name="fs"/> 
+  <preference name="smartUpdate" value="true"/>
+  <preference name="debug" value="false"/>
+  <preference name="backgroundMode" value="audio"/>
+  <preference name="iOS7StatusBarAppearance" value="false"/>
+  <preference name="statusBarAppearance" value="false"/>
+  <preference name="autoLaunch" value="true"/>
+  <permission name="readPhoneState"/>
+
+
+  <permission name="camera"/>
+  <permission name="record"/>
+  <permission name="location"/>
+  <permission name="fileSystem"/>
+  <permission name="internet"/>
+  <permission name="bootCompleted"/>
+  <permission name="hardware"/>
+
+  <access origin="*"/>
+  <feature name="qq">
+    <param name="urlScheme" value="tencent1106115842"/>
+    <param name="apiKey" value="1106115842"/>
+  </feature>
+  <feature name="wx">
+    <param name="urlScheme" value="wxd0d84bbf23b4a0e4"/>
+    <param name="apiKey" value="wxd0d84bbf23b4a0e4"/>
+    <param name="apiSecret" value="a354f72aa1b4c2b8eaad137ac81434cd"/>
+  </feature>
+  <feature name="smsVerify">
+    <param name="android_app_key" value="1e2a76a3eac1f"/>
+    <param name="android_app_secret" value="4d33acb36b4c15ab57c6acb808b07cc5"/>
+    <param name="ios_app_key" value="e2fhsc7fbw00"/>
+    <param name="ios_app_secret" value="db5abtd9931e3211932dde17c94c30ae"/>
+  </feature>
+  <feature name="downloadManager"/>
+  <feature name="fs"/>
 </widget>
